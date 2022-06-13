@@ -1,0 +1,24 @@
+version: 2
+
+models:
+    - name: stg__addresses
+      description:
+        Contains address details of all all users 
+    - name: stg__events
+      description:
+        Contains events associated with product orders
+    - name: stg__order_items
+      description: 
+        Contains the quantities with a given order_id
+    - name: stg__orders
+      description: 
+        Contains the details of all orders placed
+    - name: stg__products
+      description: 
+        Pricing and inventory details of products
+    - name: stg__promos
+      description: 
+        Details the promotions related to orders
+    - name: stg__users
+      description: 
+        Contains all customer informaiton

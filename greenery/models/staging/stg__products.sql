@@ -3,4 +3,4 @@ product_id
 , name
 , price
 , inventory
-FROM {{source('tutorial','products')}}
+FROM {{source('greenery','products')}}

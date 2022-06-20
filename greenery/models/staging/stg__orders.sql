@@ -12,4 +12,4 @@ order_id
 , estimated_delivery_at
 , delivered_at
 , status
-FROM {{source('tutorial','orders')}}
+FROM {{source('greenery','orders')}}

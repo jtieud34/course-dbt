@@ -13,6 +13,11 @@ models:
     - name: stg__orders
       description: 
         Contains the details of all orders placed
+      columns:
+        - name: created_at
+          test:
+            - unique
+            - not_null        
     - name: stg__products
       description: 
         Pricing and inventory details of products
@@ -22,3 +27,8 @@ models:
     - name: stg__users
       description: 
         Contains all customer informaiton
+      columns:
+        - name: user_id
+          test:
+            - unique
+            - not_null

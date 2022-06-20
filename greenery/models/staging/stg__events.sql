@@ -7,4 +7,4 @@ event_id
 , event_type
 , order_id
 , product_id
-FROM {{source('tutorial', 'events')}}
+FROM {{source('greenery', 'events')}}

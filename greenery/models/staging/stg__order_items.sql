@@ -2,4 +2,4 @@ SELECT
 order_id
 , product_id
 , quantity
-FROM {{source('tutorial','order_items')}}
+FROM {{source('greenery','order_items')}}

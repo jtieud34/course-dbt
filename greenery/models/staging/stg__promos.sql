@@ -2,4 +2,4 @@ SELECT
 promo_id
 , discount
 , status
-FROM {{source('tutorial','promos')}}
+FROM {{source('greenery','promos')}}

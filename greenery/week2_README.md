@@ -24,6 +24,10 @@ Under marketing, I included a converted users model to help analyze event sessio
 
 Under product I created page view facts model which leverages dbt incremental model strategy.  In my experience top of funnel events data is typically the largest dataset analyst, data publishers work with.  So using an incermental strategy to only extract, load, and transform the newest data is the most optimal way to handle such a large data source.
 
+
+![DAG](https://user-images.githubusercontent.com/38432695/174513483-0691f02a-17ea-4325-8397-40273d6baaf5.PNG)
+
+
 Q: What assumptions are you making about each model? (i.e. why are you adding each test?)
 
 A: I stuck to the out of the box test with this greenery dataset unique and not_null. I tend to focus on the downstream metrics and construct test around critical fields used in various high visiblity metrics used by the business.  Based on that thought process I will develop test around those key columns and value ranges.  In my day job I've worked extensively with extending the basic principles of the test availble in DBT public git repo such as,  writing macros for `not_null_where`, and `unique_where` which allows me to pass arguments like model, column, condition this allows you to pass conditions to those test macros to isolate subsets of data that span long time periods which otherwide may fail with the generical out of box schema tests.

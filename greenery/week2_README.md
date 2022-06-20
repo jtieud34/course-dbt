@@ -38,3 +38,7 @@ A: only 1 failure on `not_null_my_first_dbt_model_id.sql`
 
 
 Your stakeholders at Greenery want to understand the state of the data each day. Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.
+
+I would have dbt tests run on the same schedule as the models themselves.  For example if we were in an overnight batch ETL system with our source data.  Each day the models in marts/ are ran I would also want the test to execute.  Here we could leverage different tools like datadog or opsgenie along with integration into something like Slack where on duty folks could be paged if certain errors are present.
+
+We could attach SLAs to specific datasets.  For example if we know specific DAGs are required for execute reporting dashboard any errors in these key models would trigger critical alerts which would have a specific time to investigate and resolve prior to emails, reports, or dashboards being send to downstream consumers.

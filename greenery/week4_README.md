@@ -5,8 +5,11 @@
 #### Run dbt snapshot again and see how the data has changed for those two orders
 
   ```
-select * from dbt.snapshots."orders_snapshot" where dbt_valid_to is not null
+select * from snapshots.orders_snapshot where dbt_valid_to is not null
    ```
+
+![snapshot](https://user-images.githubusercontent.com/38432695/177081797-3b16e97c-5efc-4de3-92d4-37097aece2ff.PNG)
+
 
 ### PART 2: Modeling challenge
 
